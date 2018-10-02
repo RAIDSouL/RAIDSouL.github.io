@@ -1,106 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>RAIDSouL | Profile website </title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width;initial-scale=1;"/>        
-        <style>
-            body {
-                background-color: #111;
-                font-family: 'Arial';
-                padding-top: 30px;
-            }
-            a {
-                color:#fff;
-            }
-            .profile {
-                max-width: 150px;
-                max-height: 150px;
-                margin: auto;
-            }
-            .profile img {
-                width: 100%;
-            }
-            .header {
-                color: #FFF;
-                max-width:800px;
-                margin: auto;
-                text-align: center;
-                font-size: 35px;
-                font-family: 'Arial';
-            }
-            .navbar {
-                max-width: 800px;
-                list-style: none;
-                color:#FFF;
-                margin: auto;
-                margin-top: 50px;
-                padding-left: 0;
+
+<head>
+    <title>RAIDSouL | Profile website </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width;initial-scale=1;" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Arial';
+            padding-top: 30px;
+            background-color: #4b79cf;
+            background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+            background-size: 300% 300%;
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        }
+
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 0% 50%
             }
 
-            .navbar li {
-                display: inline-block;
-                padding: 5px 20px;
+            50% {
+                background-position: 100% 50%
             }
-            .navbar li a {
-                text-decoration: none;
+
+            100% {
+                background-position: 0% 50%
             }
-            .content {
-                max-width:800px;
-                color:#fff;
-                margin: auto;
-                padding: 20px;
-                background-color:#353535;
-                margin-top: 20px;
+        }
+
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 0% 50%
             }
-            .footer {
-                color:#FFF;
+
+            50% {
+                background-position: 100% 50%
             }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            RAIDSoul
-        </div>
-        
-        <ul class="navbar">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="https://github.com/RAIDSouL">RAIDSouL</a></li>
-	    <li><a href="https://github.com/nitpum">nitpum</a></li>
-        </ul>
-        <div class="content">
-	<table align = "center">
-		<tr>
-		<td>
-            		WaHAHAHAAHHAHHAAHHA
-            		<br>
-            		HELLO WORLD
-            		<br> 
-            		HELLO..FORM THE OUTSIDE~~~
-            		<br>
-			Just test a little bit
-                <div class="profile">
-            		<img src="https://avatars1.githubusercontent.com/u/20211769?s=460"/>
-                </div>
-		</td>
-		<td>
-			Theboy who professional at programing
-			<br>
-			Heading at this project eiei
-			<br>
-			<div class="profile">
-                <img src="https://avatars1.githubusercontent.com/u/2589606?s=460"/>
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        a {
+            color: #a24bcf;
+        }
+
+        .profile {
+            max-width: 150px;
+            max-height: 150px;
+            margin: auto;
+        }
+
+        .profile img {
+            width: 100%;
+        }
+
+        .header {
+            color: #FFF;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 35px;
+            font-family: 'Arial';
+        }
+
+        .navbar {
+            max-width: 800px;
+            list-style: none;
+            color: #FFF;
+            margin: auto;
+            margin-top: 50px;
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 5px 20px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            color: #000;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #FFF;
+            border-radius: 5px;
+            margin-top: 20px;
+            -webkit-animation: fadein 2s;
+            /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadein 2s;
+            /* Firefox < 16 */
+            -ms-animation: fadein 2s;
+            /* Internet Explorer */
+            -o-animation: fadein 2s;
+            /* Opera < 12.1 */
+            animation: fadein 2s;
+        }
+
+        .content div .content-footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2%;
+        }
+
+        .footer {
+            padding-top: 5%;
+            text-align: center;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        RAIDSoul
+    </div>
+
+    <div class="content">
+        <div>
+            <div class="profile">
+                <img src="https://avatars1.githubusercontent.com/u/20211769?s=460" />
             </div>
-            
-            
-		</td>
-		</tr>
-	</table>
+            <center>
+                <h3>RAIDSoul</h3>
+            </center>
+            <div class="content-footer">
+                <a href="https://github.com/RAIDSoul"><i class="fab fa-github fa-2x"></i></a>
+            </div>
         </div>
-        
-        <div class="footer">
-           &copy; Copyright 2017
+        <div>
+            <div class="profile">
+                <img src="https://avatars1.githubusercontent.com/u/2589606?s=460" />
+            </div>
+            <center>
+                <h3>nitpum</h3>
+            </center>
+            <div class="content-footer">
+                <a href="https://github.com/nitpum"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://twitter.com/nitpum"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
         </div>
+    </div>
 
-    </body>
+    <div class="footer">
+        &copy; Copyright 2018<br>
+        Made with ❤️
+    </div>
+
+</body>
+
 </html>
